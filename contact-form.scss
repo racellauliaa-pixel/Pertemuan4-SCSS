@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as v;
+
+.contact-info {
+  margin-bottom: v.$spacing-unit;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 420px;
+
+  .contact-form__input,
+  .contact-form__textarea {
+    padding: 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  .contact-form__button {
+    padding: 0.7rem;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}

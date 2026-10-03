@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside  main"
+    "footer footer";
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: v.$spacing-unit;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: v.$spacing-unit;
+
+  @include m.respond-to-mobile {
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-header  { grid-area: header; }
+.page-aside   { grid-area: aside; }
+.page-main    { grid-area: main; }
+.page-footer  { grid-area: footer; }

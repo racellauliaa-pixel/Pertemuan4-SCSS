@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.page-header {
+  @include m.panel;
+  padding: calc(v.$spacing-unit * 1.5);
+  text-align: center;
+
+  .header__title {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .header__subtitle {
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: v.$spacing-unit;
+  }
+
+  .header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+
+    .header__nav-link {
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

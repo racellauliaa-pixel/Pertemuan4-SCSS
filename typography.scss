@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+:root {
+  --color-primary: #{v.$color-primary};
+  --color-accent: #{v.$color-accent};
+  --color-bg: #{v.$color-bg};
+  --color-surface: #{v.$color-surface};
+  --color-text: #{v.$color-text};
+  --color-border: #{v.$color-border};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include m.dark-mode-vars;
+  }
+}
+
+body {
+  font-family: v.$font-family-base;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}

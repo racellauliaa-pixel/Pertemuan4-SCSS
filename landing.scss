@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.page-main {
+  @include m.panel;
+  padding: calc(v.$spacing-unit * 1.5);
+}
+
+.content-section {
+  margin-bottom: calc(v.$spacing-unit * 1.5);
+
+  .content-section__title {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+}

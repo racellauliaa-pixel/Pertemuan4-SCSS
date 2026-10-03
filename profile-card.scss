@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.page-aside {
+  @include m.panel;
+  padding: v.$spacing-unit;
+}
+
+.profile-card {
+  @include m.flex-column-center;
+  gap: 0.5rem;
+  margin-bottom: v.$spacing-unit;
+
+  .profile-card__photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+  }
+
+  .profile-card__name {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+  }
+}
+
+.biodata-list {
+  .biodata-list__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed var(--color-border);
+    font-size: 0.92rem;
+  }
+
+  .biodata-list__label {
+    font-weight: 600;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .biodata-list__value {
+    text-align: right;
+  }
+}

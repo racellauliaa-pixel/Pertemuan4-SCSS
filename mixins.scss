@@ -1,0 +1,29 @@
+@use 'variables' as v;
+
+@mixin dark-mode-vars {
+  --color-primary: #{v.$color-primary-dark};
+  --color-accent: #{v.$color-accent-dark};
+  --color-bg: #{v.$color-bg-dark};
+  --color-surface: #{v.$color-surface-dark};
+  --color-text: #{v.$color-text-dark};
+  --color-border: #{v.$color-border-dark};
+}
+
+@mixin respond-to-mobile {
+  @media (max-width: v.$breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin panel {
+  background-color: var(--color-surface);
+  border-radius: v.$radius-base;
+  border: 1px solid var(--color-border);
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
